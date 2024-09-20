@@ -1,0 +1,191 @@
+<!-- Classes and ID -->
+
+<!-- Div- used to  make a container and organise tag and elements  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Tag</title>
+</head>
+<body>
+    <div>
+        <p>First Paragraph</p>
+    </div>
+    <div>
+        <p>Second Paragraph</p>
+    </div>
+    
+</body>
+</html>
+
+<!-- class attribute is use to give label to tag or container, each element have multiple class and each class can be used in multiple elements -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Tag</title>
+</head>
+<body>
+    <div class="container" class="abc">
+        <p>First Paragraph</p>
+    </div>
+    <div class="container">
+        <p>Second Paragraph</p>
+    </div>
+    
+</body>
+</html>
+
+
+<!-- id attribute use to give unique identity or name to tag and elements,  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Tag</title>
+</head>
+<body>
+    <h1 id="heading">Birthday Boy</h1>
+    <div class="container" class="abc">
+        <p>First Paragraph</p>
+    </div>
+    <div class="container">
+        <p>Second Paragraph</p>
+    </div>
+    
+</body>
+</html>
+
+
+<!-- HTML Media - images, audio files, video files are media elements  -->
+
+<!-- Image Tag <img>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Tag</title>
+</head>
+<body>
+    <h1>Random Picture</h1>
+
+    <img src="https://picsum.photos/200" alt="This will be a random image" width="200" height="200" loading="eager">
+    
+</body>
+</html>
+
+<!-- picture tag to define different sorces for diff device width-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Tag</title>
+</head>
+<body>
+    <picture>
+        <!-- here image changes as size of the device width changes-->
+        <source media="(min-width: 720px)" srcset="url of image1">
+        <source media="(min-width: 480px)" srcset="url of image2">
+        <source media="(min-width: 320px)" srcset="url of image3"> 
+    </picture>
+</body>
+</html>
+
+<!-- audio tag -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Tag</title>
+</head>
+<body>
+    <audio src="" controls autoplay loop preload="metadata" controllist="nodownload"></audio>
+
+    <!-- preload-auto, metadata, none -->
+     <!-- controllist- controllist="nodownload nofullscreen" -->
+
+
+    <audio controls>
+        <source src="audio.opus" type="audio/ogg; codec=opus"/>
+        <source src="audio.ogg" type="audio/ogg; codec=vorbis"/>
+        <source src="audio.mp3" type="audio/mpeg"/>
+    </audio>
+</body>
+</html>
+
+
+<!-- video tag -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Tag</title>
+</head>
+<body>
+
+    <!-- video tag will only present video present in local, but if play video from external server it will not work -->
+
+
+    <video src="video.mp4" controls width="250" height="200" autoplay loop preload="metadata"></video>
+
+    <video src="video.mp4" controls width="250" height="200" poster="movie-poster.jpg" controlsList="nodownload nofullscreen" muted></video>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Tag</title>
+</head>
+<body>
+
+    <!-- to play video from external server we use iframes -->
+
+    <video src="video.mp4" controls width="250" height="200" autoplay loop preload="metadata"></video>
+
+    <video controls width="250">
+        <source src="video.ogv" type="video/ogg">
+        <source src="video.avi" type="video/avi">
+        <source src="video.mp4" type="video/mp4">
+        Sorry, your browser doesn't support embedded video
+    </video>
+
+</body>
+</html>
+
+
+<!-- iframe tag- to embed other html doc into existing html file -->
+
+<iframe src="URL/Path" frameborder="10" width="600" height="400" sandbox allow loading="lazy" scrolling="no" name="MyIFrame"></iframe>
+
+
+<!-- prevent our website from being iframmed, this process is called Crosss Framed Scripting -->
+
+<!-- add to server heading to avoid iframming of website -->
+<!-- content-security-policy:frame-ancistors'none -->
+
+
+<!-- svg vs canvas -->
+
+<!-- svg(Scalable Vector Graphics) are vector based-->
+
+<!-- canvas are raster based  -->
